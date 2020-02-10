@@ -12,7 +12,7 @@ const TodoList = (props) => {
         <div>
 {/* receives your Todos array and iterates over the list generating a new `<Todo />` for each element in the array. */}
         {props.todo.map(item => (
-            <Todo key={item.id} item={item} />
+            <Todo key={item.id} item={item} toggleItem={props.toggleItem} />
         ))}
         
         </div>

@@ -9,6 +9,9 @@ constructor(){
 render(){
     return(
         <form>
+            <input type="text" />
+            <button>Add Todo</button>
+            <button>Clear Todo</button>
             
         </form>
     )
