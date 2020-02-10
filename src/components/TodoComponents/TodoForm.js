@@ -26,12 +26,19 @@ handleChanges = e => {
 
 render(){
     return(
+        <div>
         <form onSubmit={this.handleSubmit}>
             <input type="text" name="newItem" value={this.state.newItem} onChange={this.handleChanges} />
             <button>Add Todo</button>
-           
+            
             
         </form>
+        <form>
+        <button>Clear</button>
+        </form>
+        
+        
+        </div>
     );
 }
 
