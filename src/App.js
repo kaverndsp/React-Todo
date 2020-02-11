@@ -66,10 +66,10 @@ class App extends React.Component {
     e.preventDefault();
     this.setState({
       todoList: this.state.todoList.filter(item => {
-        if(item.completed === item.completed){
-          return !item.completed;
-        }else{
+        if(!item.completed === item.completed){
           return item.completed;
+        }else{
+          return !item.completed;
         }
       })
     })
