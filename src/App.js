@@ -63,10 +63,14 @@ class App extends React.Component {
   };
 
   reset = (e) => {
-    e.preventDefaukt();
+    e.preventDefault();
     this.setState({
       todoList: this.state.todoList.filter(item => {
-        return !item.completed;
+        if(item.completed === item.completed){
+          return !item.completed;
+        }else{
+          return item.completed;
+        }
       })
     })
   }
@@ -80,6 +84,7 @@ class App extends React.Component {
         <TodoForm addNewItem={this.addNewItem} reset={this.reset}/>
         <TodoList todo={this.state.todoList}
         toggleItem={this.toggleItem}
+        reset={this.reset}
         />
       </div>
     );

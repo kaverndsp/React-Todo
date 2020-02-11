@@ -33,9 +33,9 @@ render(){
             
             
         </form>
-        <form>
-        <button>Clear</button>
-        </form>
+        
+       
+       
         
         
         </div>
