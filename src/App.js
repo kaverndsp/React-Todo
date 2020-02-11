@@ -62,13 +62,22 @@ class App extends React.Component {
     });
   };
 
+  reset = (e) => {
+    e.preventDefaukt();
+    this.setState({
+      todoList: this.state.todoList.filter(item => {
+        return !item.completed;
+      })
+    })
+  }
+
   
 
   render() {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
-        <TodoForm addNewItem={this.addNewItem}/>
+        <TodoForm addNewItem={this.addNewItem} reset={this.reset}/>
         <TodoList todo={this.state.todoList}
         toggleItem={this.toggleItem}
         />
